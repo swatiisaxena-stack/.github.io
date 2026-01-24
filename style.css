@@ -3,6 +3,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 /* ================= HEADER (LATEST) ================= */
+/* HEADER */
+.site-header {
+    width: 100%;
+    background-color: #fbf3e6;
+    padding: 16px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 0 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #5a6b6a;
+    font-weight: 500;
+}
 
 .top-header {
     position: sticky;
