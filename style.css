@@ -1,153 +1,133 @@
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-/* ===== HEADER ===== */
-.site-header {
-    background-color: #fbf1df;   /* same cream shade */
-    .site-header {
-    box-shadow: none;
-    border-bottom: 1px solid rgba(0,0,0,0.04);
-}
-padding: 18px 40px;
+<style>
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ================= HEADER (LATEST) ================= */
+
+.top-header {
     position: sticky;
     top: 0;
     z-index: 1000;
-}
-
-.nav-right {
-    display: flex;
-    justify-content: flex-end;   /* RIGHT SIDE */
-    gap: 28px;
-}
-
-.nav-right a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #2f4159;              /* same font color */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    position: relative;
-}
-
-/* hover underline animation */
-.nav-right a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -4px;
-    background-color: #2f6f6a;
-    transition: width 0.3s ease;
-}
-
-.nav-right a:hover::after {
-    width: 100%;
-}
-
-.nav-right a.active {
-    font-weight: 600;
-}
-.site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #fbf1df; /* cream */
+    background-color: #fbf3e6;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Container */
-.nav-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 16px 30px;
+/* Top info strip */
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 30px;
+    font-size: 13px;
+    background-color: #eef2c8;
+    color: #4a5d5a;
+}
+
+.info-item {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 6px;
+    white-space: nowrap;
 }
 
-/* Logo text (optional) */
-.logo-text {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2f4159;
-    font-family: 'Poppins', sans-serif;
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: #2f6f6a;
 }
 
-/* Nav links */
-.nav-links {
-    display: flex;
-    gap: 28px;
-}
-
-/* Links styling */
-.nav-links a {
-    text-decoration: none;
-    font-size: 15px;
-    color: #2f4159;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    position: relative;
-    padding-bottom: 4px;
-    transition: color 0.3s ease;
-}
-
-/* Hover underline animation */
-.nav-links a::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: #2f6f6a;
-    transition: width 0.3s ease;
-}
-
-.nav-links a:hover::after {
-    width: 100%;
-}
-
-/* Hover color */
-.nav-links a:hover {
+.top-info a {
     color: #2f6f6a;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* Active page */
-.nav-links a.active {
-    font-weight: 600;
+.map-soon {
+    font-style: italic;
+    opacity: 0.85;
 }
 
-/* Hamburger */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #2f4159;
+/* Social icons */
+.social-links {
+    display: flex;
+    gap: 14px;
 }
 
-/* ===== MOBILE ===== */
+.social-links a svg {
+    transition: transform 0.2s ease;
+}
+
+.social-links a:hover svg {
+    transform: scale(1.15);
+}
+
+/* Navigation bar */
+.nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 14px 30px;
+    background-color: #fbf3e6;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #5a6b6a;
+    font-weight: 500;
+}
+
+.nav a.active {
+    color: #2f6f6a;
+    border-bottom: 2px solid #2f6f6a;
+    padding-bottom: 4px;
+}
+
+/* Mobile responsive */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 64px;
-        right: 0;
-        background-color: #fbf1df;
+    .top-info {
         flex-direction: column;
-        width: 100%;
+        gap: 6px;
         text-align: center;
-        padding: 20px 0;
-        display: none;
     }
 
-    .nav-links a {
-        padding: 12px 0;
-        font-size: 16px;
-    }
-
-    .nav-links.show {
-        display: flex;
+    .nav {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
+
+.book-now-btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background-color: #2f6f6a;
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #245955;
+    transform: translateY(-2px);
+}
+.book-now {
+    display: inline-block;
+    background-color: #2f6f6a; /* same as other buttons */
+    color: white;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.book-now:hover {
+    background-color: #245955;
+}
+
+
+</style>
